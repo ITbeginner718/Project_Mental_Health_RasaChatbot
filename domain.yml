@@ -1,0 +1,43 @@
+version: "3.1"
+
+intents:
+- start_chatbot
+- life_have_hardTime
+- suggest_feedback_positive
+- reason_stupid_self
+# entities:
+# - cuisine
+# - number
+
+# slots:
+#   cuisine:
+#     type: text
+#     mappings:
+#       - type: from_entity
+#         entity: cuisine
+
+
+
+#양식이 실행되면 매 사용자 차례가 끝날 때마다
+#사용자 지정 액션이 실행되어 최근에 채워진 슬롯의 유효성을 검사합니다.
+actions:
+- action_default_fallback
+- action_ask_feeling
+- action_stupid_self
+- action_stupid_self_feedback
+
+
+responses:
+  utter_greeting:
+  - text: 안녕하세요. 마음의 햇살 ai 챗봇 마음e이에요.😊 요즘 어떻게 지내시나요?
+
+  utter_suggest_feedback:
+  - text: 제가 추천하는 피드백 한 번 실행 해보시겠어요? 
+
+  # 사용자 발화 예외처리 
+  utter_please_rephrase:
+  - text: 미안해요... 무슨 뜻인지 이해하지 못했어요😞 다시 한 번 말해줄래요?
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

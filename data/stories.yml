@@ -1,0 +1,17 @@
+version: "3.1"
+
+stories:
+
+- story: sample_stroy
+  steps:
+  - intent: start_chatbot
+  - action: utter_greeting
+  - intent: life_have_hardTime
+  - action: action_ask_feeling
+  - intent: reason_stupid_self
+  - action: action_stupid_self
+  - action: utter_suggest_feedback
+  - intent: suggest_feedback_positive
+  - action: action_stupid_self_feedback
+
+

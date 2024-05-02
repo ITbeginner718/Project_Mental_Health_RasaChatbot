@@ -1,0 +1,10 @@
+version: "3.1"
+
+rules:
+- rule: 예외처리 
+  steps:
+  - intent: nlu_fallback #Rasa에서 기본 제공
+  - action: utter_please_rephrase
+
+
+

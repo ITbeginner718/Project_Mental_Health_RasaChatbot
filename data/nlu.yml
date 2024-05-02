@@ -1,0 +1,36 @@
+version: "3.1"
+
+nlu:
+- intent: start_chatbot
+  examples: |
+    - 시작
+    - 챗봇 시작
+    - 시작하세요
+
+- intent: suggest_feedback_positive
+  examples: |
+    - 응 추천해줘 한번 해볼께
+    - 한번 해볼께
+    - 좋아 
+    - 추천해줘
+    - 좋아 추천해줘
+    - 응 좋아
+
+
+- intent: life_have_hardTime
+  examples: |
+    - 요새 삶이 너무 힘들어
+    - 삶이 고통스러워 
+    - 삶이 지치고 힘들어
+    - 살아가는게 참 힘들어
+    - 정말 지치고 힘들다 
+
+# 스스로 멍청하다고 생각할 때 
+- intent: reason_stupid_self 
+  examples: | 
+    - 내 스스로가 너무 멍청하고 잘하는 것도 아무것도 없는 것 같아
+    - 나는 남들보다 멍청하고 한심한 놈이야 잘하는 것이 아무것도 없고 
+    - 왜 나는 잘하는 것이 없을까? 
+    - 나는 잘하는 것도 없고 멍청한 인간같이 느껴져
+
+
