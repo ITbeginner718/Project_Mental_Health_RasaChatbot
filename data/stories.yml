@@ -2,16 +2,20 @@ version: "3.1"
 
 stories:
 
-- story: sample_stroy
+
+
+# cbt 적용
+- story: 스토리2:발표할 때 사람들이 나를 하찮게 보는 것 같아
   steps:
-  - intent: start_chatbot
-  - action: utter_greeting
-  - intent: life_have_hardTime
-  - action: action_ask_feeling
-  - intent: reason_stupid_self
-  - action: action_stupid_self
-  - action: utter_suggest_feedback
-  - intent: suggest_feedback_positive
-  - action: action_stupid_self_feedback
+  - intent: start_chatbot_cbt
+  - action: utter_start_chatbot_cbt
+  - intent: story_SneeringToMe
+  - action: action_story_SneeringToMe
+  - intent: story_SneeringToMe_situation
+  - action: action_story_SneeringToMe_situation
+  - intent: story_SneeringToMe_response1_1
+  - action: action_story_SneeringToMe_response1_1
+  - intent: story_SneeringToMe_response2_1
+  - action: action_story_SneeringToMe_response2_1
 
 

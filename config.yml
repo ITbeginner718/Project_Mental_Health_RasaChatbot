@@ -12,37 +12,46 @@ language: ko
 
 pipeline:
 
-- name: SpacyNLP
-  model: "ko_core_news_md"      # Korean language model
-- name: SpacyTokenizer
-- name: SpacyFeaturizer
-- name: SpacyEntityExtractor
-- name: RegexFeaturizer
-- name: LexicalSyntacticFeaturizer
-- name: CountVectorsFeaturizer
-- name: DIETClassifier
-  epochs: 100
-  constrain_similarities: true
-- name: EntitySynonymMapper
-- name: ResponseSelector
-  epochs: 100
-  #추가 사항
-  # 신뢰도 임계값(정확도 )
-- name: FallbackClassifier
-  threshold: 0.9 #정확도가 90%미만일경우 예외 처리 
-  
-  # 정확도가 990%미만일때 default_fallback action실행 
-  core_fallback_threshold: 0.9
-  core_fallback_action_name: "action_default_fallback"
-  enable_fallback_prediction: True
+  # - name: SpacyNLP
+  #   model: "ko_core_news_md"    # Korean language model
+  # - name: SpacyTokenizer
+  # - name: SpacyFeaturizer
+  # - name: SpacyEntityExtractor
+  # - name: RegexFeaturizer
+  # - name: LexicalSyntacticFeaturizer
+  # - name: CountVectorsFeaturizer
+  # - name: DIETClassifier
+  #   epochs: 100
+  #   constrain_similarities: true
+  # - name: EntitySynonymMapper
+  # - name: ResponseSelector
+  #   epochs: 100
+  # - name: FallbackClassifier
+  #   #불확실성의 임계값
+  #   threshold: 0.9
+  #   # 다른 최상위 의도와의 점수 차이가 이 임계값 이하일 때 Fallback 처리를 실행하는 임계값
+  #   ambiguity_threshold: 0.9
+
+  - name: SpacyNLP
+    model: "ko_core_news_md"    # Korean language model
+  - name: SpacyTokenizer
+  - name: SpacyFeaturizer
+  - name: SpacyEntityExtractor
+  - name: RegexFeaturizer
+  - name: LexicalSyntacticFeaturizer
+  - name: CountVectorsFeaturizer
+  - name: DIETClassifier
+    epochs: 100
+    constrain_similarities: true
+  - name: EntitySynonymMapper
+  - name: ResponseSelector
+    epochs: 100
+  - name: FallbackClassifier
+    #불확실성의 임계값
+    threshold: 0.9
 
 # policies:
-#   - name: RulePolicy
-
-# # No configuration for policies was provided. The following default policies were used to train your model.
-# # If you'd like to customize them, uncomment and adjust the policies.
-# # See https://rasa.com/docs/rasa/policies for more information.
-
+#   - name: RulePolicypolicies:
 policies:
 # # No configuration for policies was provided. The following default policies were used to train your model.
 # # If you'd like to customize them, uncomment and adjust the policies.

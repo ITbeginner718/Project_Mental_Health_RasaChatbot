@@ -1,36 +1,90 @@
 version: "3.1"
 
 nlu:
-- intent: start_chatbot
+##########################cbt 적용#####################################
+
+# start 
+- intent: start_chatbot_cbt
   examples: |
-    - 시작
-    - 챗봇 시작
-    - 시작하세요
+    - 인지행동치료시작 [권순호](username)
+    - 인지행동치료시작 [k_sunho](username)
+    - 인지행동치료시작 [dafasdf](username)
+    - 인지행동치료시작 [mark__dd](username)
+    - 인지행동치료시작 [홍길동](username)
+    - 인지행동치료시작 [user123](username)
+    - 인지행동치료시작 [john_doe](username)
+    - 인지행동치료시작 [이름](username)
 
-- intent: suggest_feedback_positive
+# feedback 
+- intent: feedback_ok
   examples: |
-    - 응 추천해줘 한번 해볼께
-    - 한번 해볼께
-    - 좋아 
-    - 추천해줘
-    - 좋아 추천해줘
-    - 응 좋아
+    - 너무 좋은데 
+    - 좋아 피드백 추천해줘
+    - 좋아 해줘
+    - 너무 좋아 피드백 추천해줘 
 
-
-- intent: life_have_hardTime
+# feedback 
+- intent: feedback_no
   examples: |
-    - 요새 삶이 너무 힘들어
-    - 삶이 고통스러워 
-    - 삶이 지치고 힘들어
-    - 살아가는게 참 힘들어
-    - 정말 지치고 힘들다 
+    - 괜찮아
+    - 다음에 해줘
+    - 괜찮아 다음에 해줘 
 
-# 스스로 멍청하다고 생각할 때 
-- intent: reason_stupid_self 
-  examples: | 
-    - 내 스스로가 너무 멍청하고 잘하는 것도 아무것도 없는 것 같아
-    - 나는 남들보다 멍청하고 한심한 놈이야 잘하는 것이 아무것도 없고 
-    - 왜 나는 잘하는 것이 없을까? 
-    - 나는 잘하는 것도 없고 멍청한 인간같이 느껴져
+#cbt스토리1
+- intent: story_SneeringToMe 
+  examples: |
+    - 나는 발표를 잘 못하겠어
+    - 나는 발표만 하면 너무 버벅거려
+    - 발표하는 것이 너무 무서워
+    - 발표하는 게 너무 힘들어
+
+#cbt스토리1
+- intent: story_SneeringToMe_situation 
+  examples: |
+    - 발표를 잘 못하면 사람들이 나를 무시할 것 같아 
+    - 발표를 잘 못하면 사람들이 나를 하찮게 보는 것 같아    
+    - 발표하다 실수하면 나를 무시할 것 같아 
+    - 발표하다 실수하면 사람들이 나를 무시할 것 같아
+    - 발표하다 버벅이면 사람들이 나를 무시할 것 같아
+    - 발표하다 버벅이면 사람들이 나를 하찮게 보는 것 같아 
+    - 발표하다 잘못하면 사람들에게 하찮게 보일 것 같아 
+
+
+#cbt스토리1 
+- intent: story_SneeringToMe_response1_1 
+  examples: |
+    - 무시하고 싶은 생각은 없어 
+    - 비판하거나 무시하는 생각은 없어 
+    - 비판하고 싶은 생각은 없어
+    - 무시할 이유가 없긴 하지
+    - 비판할 이유가 없긴 해
+    - 무시하지는 않아 
+    - 비판하지는 않아 
+    
+
+#cbt스토리1 
+- intent: story_SneeringToMe_response1_2
+  examples: |
+    - 사실 그런 생각 좀 하긴 해
+    - 발표가 부족해 보일 때 그런 생각을 하긴 해
+
+
+#cbt스토리1 
+- intent: story_SneeringToMe_response2_1
+  examples: |
+    - 좋아 한번 바꿔볼께
+    - 응 알았어 한번 바꿔볼께 
+    - 그렇게 믿어 볼께 
+    - 한번 믿어 볼께 
+    - 그렇게 생각을 다시 바꿔 볼께 
+    
+    
+
+  
+
+
+
+
+
 
 

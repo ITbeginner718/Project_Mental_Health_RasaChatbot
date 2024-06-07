@@ -1,35 +1,46 @@
 version: "3.1"
 
 intents:
-- start_chatbot
-- life_have_hardTime
-- suggest_feedback_positive
-- reason_stupid_self
-# entities:
-# - cuisine
-# - number
+- start_chatbot_cbt
+- story_SneeringToMe
+- story_SneeringToMe_situation
+- story_SneeringToMe_response1_1
+- story_SneeringToMe_response1_2
+- story_SneeringToMe_response2_1
+- feedback_ok
+- feedback_no
 
-# slots:
-#   cuisine:
-#     type: text
-#     mappings:
-#       - type: from_entity
-#         entity: cuisine
+entities:
+- username
+
+slots:
+  username:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: username
 
 
 
 #양식이 실행되면 매 사용자 차례가 끝날 때마다
 #사용자 지정 액션이 실행되어 최근에 채워진 슬롯의 유효성을 검사합니다.
 actions:
-- action_default_fallback
-- action_ask_feeling
-- action_stupid_self
-- action_stupid_self_feedback
+- action_story_SneeringToMe
+- action_story_SneeringToMe_situation
+- action_story_SneeringToMe_response1_1
+- action_story_SneeringToMe_response2_1
+- action_story_SneeringToMe_feedback
 
 
 responses:
   utter_greeting:
   - text: 안녕하세요. 마음의 햇살 ai 챗봇 마음e이에요.😊 요즘 어떻게 지내시나요?
+
+  utter_start_chatbot_cbt:
+  - text: 안녕하세요. 마음의 햇살 ai 챗봇 마음e이에요.😊 어떤 고민이 있으신가요?
+
+  utter_feedback_no:
+  - text: 알겠어요ㅎㅎ 
 
   utter_suggest_feedback:
   - text: 제가 추천하는 피드백 한 번 실행 해보시겠어요? 

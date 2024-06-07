@@ -6,5 +6,18 @@ rules:
   - intent: nlu_fallback #Rasa에서 기본 제공
   - action: utter_please_rephrase
 
+- rule: 피드백_ok
+  steps:
+  - intent: feedback_ok #Rasa에서 기본 제공
+  - action: action_story_SneeringToMe_feedback
+
+- rule: 피드백_no
+  steps:
+  - intent: feedback_no #Rasa에서 기본 제공
+  - action: utter_feedback_no
+
+
+
+
 
 
